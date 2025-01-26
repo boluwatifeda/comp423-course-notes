@@ -42,7 +42,7 @@ Then create the file with pathway ```.devcontainer/devcontainer.json``` by writi
 touch .devcontainer/devcontainer.json
 ```
 Add the following content to our JSON File:
-```bash
+```json
 {
   "name": "Rust DevContainer",
   "image": "mcr.microsoft.com/devcontainers/rust:latest",
@@ -50,7 +50,7 @@ Add the following content to our JSON File:
     "vscode": {
       "extensions": ["rust-lang.rust-analyzer"]
     }
-  }
+  } 
 }
 ```
 
@@ -73,13 +73,16 @@ cd hello-comp423
 ```
 
 2. Open ```src/main.rs``` and write over its contents with this function:
-```bash
-fn main() {
-    println!("Hello COMP423");
-}
-```
-and save the file.
-3. There are two ways we can run the file.
+    ```rust
+    fn main() {
+        println!("Hello COMP423");
+    }
+    ```
+    and save the file.
+
+3. There are two ways we can run the file:
+
+    === "```cargo build```"
 
     The first way utilizes ```cargo build```. This command creates an ELF (Executable and Linked File) within a new ```target``` directory which allows you to manually run the program from your terminal. You run the program by running the command ```./target/debug/<your-program-name>``` in your terminal. (```./``` tells the terminal to look for an executable in the current directory while the rest specifies the pathname of the ELF file) In this instance we would run ```./target/debug/hello-comp423```. Once this is completed your program should output:
     ```bash
@@ -90,7 +93,26 @@ and save the file.
     !!! tip
         ```cargo clean``` will remove the ```target``` directory, deleting all build artifacts. You can run this command to free up disk space, ensure a fresh build, or fix build issues.
 
+    === "```cargo run```"
+
     The second way, ```cargo run``` builds and executes your program in a single action. Whereas if you alter your process, you would have to rerun ```cargo build```, ```cargo run``` automatically rebuilds your project if your make changes everytime you execute it. Again, your project build remains in the ```target``` directory, and consists of compiled binaries (The ELF files) and dependencies.
 
     !!! note
         Note that ```cargo build``` allows you to build your project once and then run it multiple times. It can be useful for performance-sensitive tasks as it allows you to inspect or manipulate the compiled output. ```cargo run``` streamlines the process by automatically handling both tasks, which is more convenient for regular development.
+
+---
+### Key Concepts for Setting Up a DevContainer Project
+
+DevContainer
+: A configuration for containerized development environments in Visual Studio Code. It includes tools, dependencies, and settings.
+
+Docker
+: A platform that enables you to develop, ship, and run applications inside containers. Required for using DevContainers.
+
+`devcontainer.json`
+: A configuration file that defines the settings, extensions, and commands for the DevContainer.
+
+Rust DevContainer
+: A pre-configured DevContainer for Rust development. Includes Rust tools like `cargo` and the Rust Analyzer extension.
+
+---
