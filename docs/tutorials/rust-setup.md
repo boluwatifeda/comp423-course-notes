@@ -2,6 +2,9 @@
 
 * Primary author: [Boluwatife Adeshina](https://github.com/boluwatifeda)
 * Reviewer: [Miguel Alvarado Dorado](https://github.com/miguelaa123)
+---
+## Introduction
+In this tutorial, you'll learn how to set up a development environment for Rust using a DevContainer. DevContainers allow you to define a consistent, containerized development environment that works seamlessly with Visual Studio Code. Whether you're new to Rust or looking to streamline your workflow, this guide will walk you through creating a new DevContainer project, writing a simple "Hello COMP423" program, and running it successfully. By the end, you'll have a fully functional setup and a clear understanding of the tools involved. Let's get started!
 
 ---
 
@@ -18,19 +21,20 @@ Follow these steps to create and configure a Rust DevContainer for your project.
     - [Docker](https://www.docker.com/)
     - [Visual Studio Code](https://code.visualstudio.com/)
     - **VSCode Extensions**:
-        - [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+        - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
 ---
 
 ## Steps to Create a Rust Dev Container
 
 ### 1. Create a New Project Directory
-Start by creating a new folder for your project:
+Start by creating a new folder for your project by running these commands in the terminal:
 ```bash
 mkdir rust-devcontainer
 cd rust-devcontainer
 git init
 ```
+and opening the resulting folder in Visual Studio Code.
 
 ### 2. Add Dev Container Configuration
 Inside the ```rust-devcontainer```, create a new directory named ```.devcontainer```:
@@ -53,13 +57,14 @@ Add the following content to our JSON File:
   } 
 }
 ```
+This instructs VSCode to download the Rust Analyzer extension (identifier: ```rust-lang.rust-analyzer``` upon opening a Dev Container.
 
 ### 3. Opening the DevContainer
 Reopen the project in the container by pressing ```Ctrl+Shift+P``` (or ```Cmd+Shift+P``` on Mac), typing "Dev Containers: Reopen in Container," and selecting the option.
 
 Verify that Rust has been installed by opening a terminal and running the command: 
 ```bash
-rust --version
+rustc --version
 ```
 This command should return: ```rustc 1.83.0 (90b35a623 2024-11-26)```
 
@@ -68,7 +73,7 @@ To ensure functionality, lets create a basic Rust program.
 
 1. Create a new Rust project and enter it by writing the following to the command line:
 ```bash
-cargo new hello-comp423 --vcs none #The --vcs option ensures that we create a new project without automatically creating a new git repository
+cargo new hello-comp423 --vcs none      #The --vcs option ensures that we create a new project without automatically creating a new git repository
 cd hello-comp423
 ```
 
