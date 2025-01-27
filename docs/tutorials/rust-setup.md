@@ -48,8 +48,8 @@ touch .devcontainer/devcontainer.json
 Add the following content to our JSON File:
 ```json
 {
-  "name": "Rust DevContainer",
-  "image": "mcr.microsoft.com/devcontainers/rust:latest",
+  "name": "Rust DevContainer",        
+  "image": "mcr.microsoft.com/devcontainers/rust:latest", 
   "customizations": {
     "vscode": {
       "extensions": ["rust-lang.rust-analyzer"]
@@ -58,6 +58,7 @@ Add the following content to our JSON File:
 }
 ```
 This instructs VSCode to download the Rust Analyzer extension (identifier: ```rust-lang.rust-analyzer``` upon opening a Dev Container.
+```name``` is the name of the DevContainer, ```image``` is the link to the Docker image we will use, and ```customizations``` is useful for adding important extensions.
 
 ### 3. Opening the DevContainer
 Reopen the project in the container by pressing ```Ctrl+Shift+P``` (or ```Cmd+Shift+P``` on Mac), typing "Dev Containers: Reopen in Container," and selecting the option.
