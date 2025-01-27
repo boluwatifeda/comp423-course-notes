@@ -43,7 +43,8 @@ mkdir .devcontainer
 ```
 Then create the file with pathway ```.devcontainer/devcontainer.json``` by writing to your terminal:
 ```bash
-touch .devcontainer/devcontainer.json
+touch .devcontainer/devcontainer.json     #if on a Linux based system
+echo {} > .devcontainer\devcontainer.json     #if on a Windows based system
 ```
 Add the following content to our JSON File:
 ```json
