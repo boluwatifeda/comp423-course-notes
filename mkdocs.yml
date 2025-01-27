@@ -8,6 +8,8 @@ theme:
       tip: material/lightbulb-on
       warning: material/alert
       danger: material/skull
+  features:
+    -content.code.copy
 
 markdown_extensions:
   - def_list

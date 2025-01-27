@@ -53,8 +53,12 @@ Add the following content to our JSON File:
   } 
 }
 ```
+!!! note
+    - "name" is simply what you are calling your dev container
+    - "image" defines the Docker image to use, in this case the latest version of a Go environment
+    - "customizations" is useful when you want to add any important extenisions to make sure your project works for anyone using your dev container
 
-### 3. Opening the DevContainer
+### 3. Opening the Dev Container
 Reopen the project in the container by pressing ```Ctrl+Shift+P``` (or ```Cmd+Shift+P``` on Mac), typing "Dev Containers: Reopen in Container," and selecting the option.
 
 Verify that Rust has been installed by opening a terminal and running the command: 
@@ -101,9 +105,9 @@ cd hello-comp423
         Note that ```cargo build``` allows you to build your project once and then run it multiple times. It can be useful for performance-sensitive tasks as it allows you to inspect or manipulate the compiled output. ```cargo run``` streamlines the process by automatically handling both tasks, which is more convenient for regular development.
 
 ---
-### Key Concepts for Setting Up a DevContainer Project
+### Key Concepts for Setting Up a Dev Container Project
 
-DevContainer
+Dev Container
 : A configuration for containerized development environments in Visual Studio Code. It includes tools, dependencies, and settings.
 
 Docker
@@ -116,3 +120,5 @@ Rust DevContainer
 : A pre-configured DevContainer for Rust development. Includes Rust tools like `cargo` and the Rust Analyzer extension.
 
 ---
+## References
+1. [Starting a Static Website Project with MkDocs](https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-2-add-requirementstxt-python-dependency-configuration)
