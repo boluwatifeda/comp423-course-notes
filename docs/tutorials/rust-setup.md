@@ -63,7 +63,7 @@ Reopen the project in the container by pressing ```Ctrl+Shift+P``` (or ```Cmd+Sh
 
 Verify that Rust has been installed by opening a terminal and running the command: 
 ```bash
-rust --version
+rustc --version
 ```
 This command should return: ```rustc 1.83.0 (90b35a623 2024-11-26)```
 
