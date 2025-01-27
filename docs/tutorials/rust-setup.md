@@ -121,3 +121,5 @@ Rust DevContainer
 : A pre-configured DevContainer for Rust development. Includes Rust tools like `cargo` and the Rust Analyzer extension.
 
 ---
+## References
+1. [Starting a Static Website Project with MkDocs](https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-2-add-requirementstxt-python-dependency-configuration)

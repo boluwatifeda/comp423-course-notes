@@ -9,8 +9,12 @@ theme:
       warning: material/alert
       danger: material/skull
   features:
+<<<<<<< HEAD
     - instant
     - code-clipboard
+=======
+    -content.code.copy
+>>>>>>> edits/rust_devcontainer_tutorial
 
 markdown_extensions:
   - def_list
